@@ -18,13 +18,13 @@ import {
 
 // --- Components ---
 
-const Card = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
+const Card = ({ children, className = "" }: { children?: React.ReactNode, className?: string }) => (
   <div className={`bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden ${className}`}>
     {children}
   </div>
 );
 
-const Button = ({ children, onClick, variant = "primary", className = "", disabled = false }: { children: React.ReactNode, onClick?: () => void, variant?: string, className?: string, disabled?: boolean }) => {
+const Button = ({ children, onClick, variant = "primary", className = "", disabled = false }: { children?: React.ReactNode, onClick?: () => void, variant?: string, className?: string, disabled?: boolean }) => {
   const baseStyle = "px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center justify-center gap-2";
   const variants: {[key: string]: string} = {
     primary: "bg-indigo-600 text-white hover:bg-indigo-700 disabled:bg-indigo-300",
@@ -386,7 +386,7 @@ export default function App() {
         <div className="bg-amber-50 p-4 rounded-lg border border-amber-100 text-sm">
           <h4 className="font-bold text-amber-800 mb-2">诊断总结：</h4>
           <ul className="list-disc list-inside text-amber-700 space-y-1">
-            {Object.values(diagnosis).map((d, i) => (
+            {(Object.values(diagnosis) as Diagnosis[]).map((d, i) => (
               d.rootCause && <li key={i}>{d.rootCause}</li>
             ))}
           </ul>
