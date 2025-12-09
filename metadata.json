@@ -1,0 +1,7 @@
+{
+  "name": "Transformation Tracker",
+  "description": "Track your personal evolution with metrics, photos, and charts. Visualize your progress over time.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
