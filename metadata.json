@@ -1,7 +1,5 @@
 {
-  "name": "Transformation Tracker",
-  "description": "Track your personal evolution with metrics, photos, and charts. Visualize your progress over time.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "name": "Evolution Principles",
+  "description": "A personal evolution tool based on Ray Dalio's 5-Step Process to get what you want out of life.",
+  "requestFramePermissions": []
 }
